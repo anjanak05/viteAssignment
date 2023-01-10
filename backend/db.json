@@ -1,0 +1,28 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "company": "Ellette",
+      "postedAt": "2021-03-30",
+      "city": "Gangtok",
+      "location": "American Samoa",
+      "role": "Frontend",
+      "level": "Junior",
+      "contract": "Full Time",
+      "position": " Backend Developer",
+      "language": "Java"
+    }
+  ],
+  "marriageProfiles": [
+    {
+      "id": 1,
+      "firstName":"",
+      "lastName":"",
+      "email":"",
+      "phoneNumber":"",
+      "address":"",
+      "profilePic":"",
+      "age":""
+    }
+  ]
+}

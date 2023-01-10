@@ -1,10 +1,12 @@
-import EnglishApplicationForm from './Component/EnglishApplicationForm ';
 import './App.css';
+import Navbar from './Component/Navbar';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
   return (
     <div className="App">
-      <EnglishApplicationForm></EnglishApplicationForm>
+      <Navbar></Navbar>
+      <AllRoutes></AllRoutes>
     </div>
   );
 }
