@@ -8,7 +8,7 @@ import {
   Input,
   InputGroup,
   HStack,
-  InputRightElement,
+  Select,
   Stack,
   Button,
   Heading,
@@ -27,7 +27,9 @@ const EnglishApplicationForm = () => {
     address: "",
     profilePic: "",
     age: "",
+    password:""
   });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -72,33 +74,50 @@ const EnglishApplicationForm = () => {
               <Box>
                 <FormControl id="firstName" isRequired>
                   <FormLabel>First Name</FormLabel> 
-                  <Input onChange={handleChange} type="text" />
+                  <Input name="firstName"  value={formData.firstName} onChange={handleChange} type="text" />
                 </FormControl>
               </Box>
               <Box>
                 <FormControl id="lastName">
                   <FormLabel>Last Name</FormLabel>
-                  <Input onChange={handleChange} type="text" />
+                  <Input name="lastName"  value={formData.lastName} onChange={handleChange} type="text" />
                 </FormControl>
               </Box>
             </HStack>
+            <FormLabel>Gender</FormLabel>
+
+            <Select placeholder='Select option' name="gender"  value={formData.gender} onChange={handleChange}>
+  <option value='male'>Male</option>
+  <option value='female'>Female</option>
+</Select>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
-              <Input onChange={handleChange} type="text" />
+              <Input name="email"  value={formData.email} onChange={handleChange} type="text" />
+            </FormControl>
+
+
+            <FormControl id="password" isRequired>
+              <FormLabel>Password</FormLabel>
+              <Input name="password" value={formData.password} onChange={handleChange} type="text" />
             </FormControl>
             <FormControl id="address" isRequired>
               <FormLabel>Address</FormLabel>
-              <Input onChange={handleChange} type="text" />
+              <Input name="address"  value={formData.address} onChange={handleChange} type="text" />
             </FormControl>
             <FormControl id="phoneNumber" isRequired>
               <FormLabel>Phone Number</FormLabel>
-              <Input onChange={handleChange} type="Number" />
+              <Input name="phoneNumber"  value={formData.phoneNumber} onChange={handleChange} type="Number" />
             </FormControl>
 
             <FormControl id="age" isRequired>
               <FormLabel>age</FormLabel>
-              <Input onChange={handleChange} type="Number" />
+              <Input name="age"  value={formData.age} onChange={handleChange} type="Number" />
             </FormControl>
+            <FormControl id="profilePic" isRequired>
+              <FormLabel>Profile Pic</FormLabel>
+              <Input name="profilePic"  value={formData.profilePic} onChange={handleChange} type="text" />
+            </FormControl>
+
             
             <Stack spacing={10} pt={2}>
               <Button

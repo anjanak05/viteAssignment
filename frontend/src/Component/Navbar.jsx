@@ -24,7 +24,7 @@ import {
   
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-  
+//   
     return (
       <Box>
         <Flex
@@ -73,21 +73,36 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href={'#'}>
+              href={'/Login'}>
               Sign In
             </Button>
             <Button
+              as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
+             p={"5px"}
+              bg={'pink.400'}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              variant={'link'}
+              href={'/'}
+              
+              >
+              Sign Up
+            </Button>
+{/* <Link to={"/EnglishApplicationForm"}> */}
+            {/* <Button
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
               bg={'pink.400'}
-              href={'#'}
+              href={'/EnglishApplicationForm'}
               _hover={{
                 bg: 'pink.300',
               }}>
               Sign Up
             </Button>
+            </Link> */}
           </Stack>
         </Flex>
   
